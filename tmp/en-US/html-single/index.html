@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>oats_cred_users_guide</title><link rel="stylesheet" type="text/css" href="Common_Content/css/default.css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 3.2.0" /><meta name="package" content="Credential_Service_Client_Users_Guide-oats_cred_users_guide-0.1-en-US-1.0-0" /><meta name="description" content="This guide explains how to install, configure, deploy and run the Credential Delegation service client of the open software library of Canadian Astronomy Data Center, freely available at https://github.com/opencadc" /></head><body><p id="title"><a class="left" href="https://github.com/opencadc/ac"><img alt="Product Site" src="Common_Content/images//image_left.png" /></a><a class="right" href="https://github.com/opencadc/ac/docs"><img alt="Documentation Site" src="Common_Content/images//image_right.png" /></a></p><div class="book"><div class="titlepage"><div><div class="producttitle" font-family="sans-serif,Symbol,ZapfDingbats" font-weight="bold" font-size="12pt" text-align="center"><span class="productname">Credential Service Client Users Guide</span> <span class="productnumber">1.0</span></div><div font-family="sans-serif,Symbol,ZapfDingbats" font-weight="bold" font-size="12pt" text-align="center"><h1 class="title"><a id="idm139690712221040"></a>oats_cred_users_guide</h1></div><div font-family="sans-serif,Symbol,ZapfDingbats" font-weight="bold" font-size="12pt" text-align="center"><h2 class="subtitle">Users guide for the Credential Delegation Service Client.</h2></div><p class="edition">Edition 1</p><div font-family="sans-serif,Symbol,ZapfDingbats" font-weight="bold" font-size="12pt" text-align="center"><h3 class="corpauthor">
+		<span class="inlinemediaobject"><object data="Common_Content/images/title_logo.svg" type="image/svg+xml"> </object></span>
+
+	</h3></div><div font-family="sans-serif,Symbol,ZapfDingbats" font-weight="bold" font-size="12pt" text-align="center"><div class="authorgroup"><div class="author"><h3 class="author"><span class="firstname">Sara</span> <span class="surname">Bertocco</span></h3><div class="affiliation"><span class="orgname">INAF</span> <span class="orgdiv">OATS</span></div><code class="email"><a class="email" href="mailto:bertocco@oats.inaf.it">bertocco@oats.inaf.it</a></code></div><div class="author"><h3 class="author"><span class="firstname">Giuliano</span> <span class="surname">Taffoni</span></h3><div class="affiliation"><span class="orgname">INAF</span> <span class="orgdiv">OATS</span></div><code class="email"><a class="email" href="mailto:taffoni@oats.inaf.it">taffoni@oats.inaf.it</a></code></div></div></div><div font-family="sans-serif,Symbol,ZapfDingbats" font-weight="bold" font-size="12pt" text-align="center"><div class="abstract"><p class="title"><strong>Abstract</strong></p><div class="para">
+			This guide explains how to install, configure, deploy and run the Credential Delegation service client of the open software library of Canadian Astronomy Data Center, freely available at <a href="https://github.com/opencadc">https://github.com/opencadc</a>
+		</div></div></div></div></div><div class="toc"><dl class="toc"><dt><span class="chapter"><a href="#chap-intro">1. Introduction</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-Requirements">1.1. Requirements and recomendations</a></span></dt></dl></dd><dt><span class="chapter"><a href="#chap-sw_download_install">2. Credential service client installation</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-software_download">2.1. Software download</a></span></dt><dt><span class="section"><a href="#sect_software_build">2.2. Credential service client build</a></span></dt><dt><span class="section"><a href="#sect_software_install">2.3. Credential service client install and configuration</a></span></dt></dl></dd><dt><span class="chapter"><a href="#chap-available_commands">3. Client functionalities</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-Documentation-AC_admin_guide-Test_Chapter-Test_Section_1">3.1. General client description</a></span></dt></dl></dd><dt><span class="chapter"><a href="#chap-client_usage_examples">4. Java command line client usage examples</a></span></dt><dd><dl><dt><span class="section"><a href="#sect-delegate">4.1. Delegate operation</a></span></dt><dt><span class="section"><a href="#sect-view">4.2. View operation</a></span></dt><dt><span class="section"><a href="#sect-get">4.3. Get operation</a></span></dt></dl></dd><dt><span class="appendix"><a href="#appe-AC_admin_guide_Revision_History">A. Revision History</a></span></dt><dt><span class="index"><a href="#idm139690704329024">Index</a></span></dt></dl></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="chap-intro"></a>Chapter 1. Introduction</h1></div></div></div><div class="toc"><dl class="toc"><dt><span class="section"><a href="#sect-Requirements">1.1. Requirements and recomendations</a></span></dt></dl></div><div class="para">
+		The Credential Delegation is a client and server implementation of the IVOA Credential Delegation Protocol. The Credential Delegation Protocol allows a client program to delegate a user's credentials to a service such that that service may make requests of other services in the name of that user. The service provides a RESTful interface.
+	</div><div class="para">
+		In the CADC open software repository (https://github.com/opencadc) a credential delegation service client command line is available. This guide explains how to download and run this client and the available commands. Examples are provided.
+	</div><div class="section"><div class="titlepage"><div><div keep-together.within-column="always"><h2 class="title"><a id="sect-Requirements"></a>1.1. Requirements and recomendations</h2></div></div></div><div class="para">
+			Prerequisites and recomendations to run the Credential Delegation Service are:
+		</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+					Centos 7 Operative System is recommended,
+				</div></li><li class="listitem"><div class="para">
+					Java 7 or higher installed
+				</div></li></ul></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="chap-sw_download_install"></a>Chapter 2. Credential service client installation</h1></div></div></div><div class="toc"><dl class="toc"><dt><span class="section"><a href="#sect-software_download">2.1. Software download</a></span></dt><dt><span class="section"><a href="#sect_software_build">2.2. Credential service client build</a></span></dt><dt><span class="section"><a href="#sect_software_install">2.3. Credential service client install and configuration</a></span></dt></dl></div><div class="para">
+		This chapter explains how to download, build and install the credential service command line client. The software is java written and requires a java installation.
+	</div><div class="section"><div class="titlepage"><div><div keep-together.within-column="always"><h2 class="title"><a id="sect-software_download"></a>2.1. Software download</h2></div></div></div><pre class="screen">
+cd $MY_WORKING_DIR
+git clone https://github.com/opencadc/cdp
+</pre></div><div class="section"><div class="titlepage"><div><div keep-together.within-column="always"><h2 class="title"><a id="sect_software_build"></a>2.2. Credential service client build</h2></div></div></div><pre class="screen">
+cd $MY_WORKING_DIR/cdp/cadc-cdp
+gradle build
+cd build/distributions/
+tar -xvf cadc-cdp-x.y.z.tar
+</pre></div><div class="section"><div class="titlepage"><div><div keep-together.within-column="always"><h2 class="title"><a id="sect_software_install"></a>2.3. Credential service client install and configuration</h2></div></div></div><pre class="screen">
+cd $MY_WORKING_DIR/build/distributions/
+tar -xvf cadc-cdp-x.y.z.tar
+</pre><div class="para">
+			Check the CLASSPATH variable set in $MY_WORKING_DIR/build/distributions/cadc-cdp-x.y.z/bin/cadc-cdp
+		</div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="chap-available_commands"></a>Chapter 3. Client functionalities</h1></div></div></div><div class="toc"><dl class="toc"><dt><span class="section"><a href="#sect-Documentation-AC_admin_guide-Test_Chapter-Test_Section_1">3.1. General client description</a></span></dt></dl></div><div class="para">
+		Main functionalities provided:
+	</div><div class="itemizedlist"><ul><li class="listitem"><div class="para">
+				Delegate x509 credentials
+			</div></li><li class="listitem"><div class="para">
+				View the currently delegated x509 certificate
+			</div></li><li class="listitem"><div class="para">
+				Get create a new proxy certificate based on the one that has been delegated
+			</div></li></ul></div><div class="section"><div class="titlepage"><div><div keep-together.within-column="always"><h2 class="title"><a id="sect-Documentation-AC_admin_guide-Test_Chapter-Test_Section_1"></a>3.1. General client description</h2></div></div></div><div class="para">
+			To show the available operations the client help can be displayed:
+		</div><pre class="screen">
+$MY_WORKING_DIR/build/distributions/cadc-cdp-x.y.z/bin/cadc-cdp -h
+Usage: cadc-cdp [-v|--verbose|-d|--debug] --resourceID=&lt;CDP service to use&gt; &lt;op&gt; ...
+   [--cert=&lt;Cert File or Proxy Cert and Key PEM file&gt; [--key=&lt;Unencrypted Key File&gt;
+Help: cadc-cdp &lt;h|--help&gt;
+  --resourceID specifies the CDP service to use (e.g. ivo://cadc.nrc.ca/cred)
+  &lt;op&gt; is one of:    
+  --delegate [--daysValid=&lt;days&gt;
+          create new proxy certificate on the server
+  --get --userid=&lt;username&gt; [--out=&lt;file&gt; [--daysValid=&lt;days&gt; 
+  --get --userdn=&lt;user distinguished name&gt; [--out=&lt;file&gt; [--daysValid=&lt;days&gt; 
+          get a new (shorter) proxy certificate from the server;
+  --view
+          view the currently delegated proxy certificate
+
+</pre></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="chap-client_usage_examples"></a>Chapter 4. Java command line client usage examples</h1></div></div></div><div class="toc"><dl class="toc"><dt><span class="section"><a href="#sect-delegate">4.1. Delegate operation</a></span></dt><dt><span class="section"><a href="#sect-view">4.2. View operation</a></span></dt><dt><span class="section"><a href="#sect-get">4.3. Get operation</a></span></dt></dl></div><div class="para">
+		The usage of the java command line client requires the user authentication through user proxy. The user proxy can be obtained in three ways, given a X509 user certificate released by a trusted Certification Authority for authentication: mycert.crt, mykey.key
+	</div><div class="orderedlist"><ol><li class="listitem"><div class="para">
+				The concatenetion of key plus cert (pay attention: the order matter) can be used as user proxy:
+			</div><pre class="screen">
+cat mykey.key mycert.crt &gt;&gt; userproxy.pem
+</pre></li><li class="listitem"><div class="para">
+				The user proxy can be created using a script provided in the core module:
+			</div><pre class="screen">
+core/cadc-util/scripts/createProxyCert /path/mykey_and_cert.pem &lt;days of validity number&gt; cadcproxy
+</pre><div class="para">
+				Where
+			</div><pre class="screen">
+cat mykey.key mycert.pem &gt; mykey_and_cert.pem
+</pre><div class="para">
+				Certificate and key must not contain bag attributes and key must be no password protected. If needed, the password can be removed doing:
+			</div><pre class="screen">
+openssl rsa -in mykey.pem -out mykey.pem.new
+Enter pass phrase for mykey.pem: ****************
+writing RSA key
+$&gt;mv mykey.pem.new mykey.pem
+</pre></li><li class="listitem"><div class="para">
+				A VOMS proxy can be used. To create it: Create two files:
+			</div><pre class="screen">
+$HOME/.globus/usercert.pem (certificate)
+$HOME/.globus/userkey.pem (private key)
+</pre><div class="para">
+				Permissions on the pem files must be:
+			</div><pre class="screen">
+644 for $HOME/.globus/usercert.pem
+400 for $HOME/.globus/userkey.pem
+</pre><div class="para">
+				use the VOMS client ant your Virtual Organization:
+			</div><pre class="screen">
+voms-proxy-init --voms voname
+</pre></li></ol></div><div class="section"><div class="titlepage"><div><div keep-together.within-column="always"><h2 class="title"><a id="sect-delegate"></a>4.1. Delegate operation</h2></div></div></div><div class="para">
+			The delegate operation delegates the x509 credentials.
+		</div><pre class="screen">
+java ca.nrc.cadc.cred.client.Main
+                                  --delegate 
+                                  --daysValid=1  
+                                  --resourceID=ivo://&lt;authority&gt;/cred
+                                  --cert=$X509_USER_PROXY
+</pre></div><div class="section"><div class="titlepage"><div><div keep-together.within-column="always"><h2 class="title"><a id="sect-view"></a>4.2. View operation</h2></div></div></div><div class="para">
+			The view operation allows to view the currently delegated x509 certificate.
+		</div><pre class="screen">
+java ca.nrc.cadc.cred.client.Main 
+                                 --get 
+                                 --userid=&lt;a_user_id&gt; 
+                                 --resourceID=ivo://&lt;authority&gt;/cred 
+                                 --cert=$X509_USER_PROXY
+</pre></div><div class="section"><div class="titlepage"><div><div keep-together.within-column="always"><h2 class="title"><a id="sect-get"></a>4.3. Get operation</h2></div></div></div><div class="para">
+			The get operation creates a new proxy certificate based on the one that has been delegated.
+		</div><pre class="screen">
+java ca.nrc.cadc.cred.client.Main
+                                 --view 
+                                 --resourceID=ivo://&lt;authority&gt;cred
+                                 --cert=$X509_USER_PROXY
+</pre></div></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="appe-AC_admin_guide_Revision_History"></a>Revision History</h1></div></div></div><div class="para"><p></p>
+		<div class="revhistory"><table summary="Revision History"><tr><th align="left" valign="top" colspan="3"><strong>Revision History</strong></th></tr><tr><td align="left">Revision 1.0-0</td><td align="left">Fri March 03 2017</td><td align="left"><span class="author"><span class="firstname">Sara</span> <span class="surname">Bertocco</span></span></td></tr><tr><td align="left" colspan="3">
+					<table border="0" summary="Simple list" class="simplelist"><tr><td>Initial creation by publican</td></tr></table>
+
+				</td></tr></table></div>
+
+	</div></div><div class="index"><div class="titlepage"><div><div><h1 class="title"><a id="idm139690704329024"></a>Index</h1></div></div></div><div class="index"></div></div></div></body></html>

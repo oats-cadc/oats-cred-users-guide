@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY PRODUCT "Documentation">
+<!ENTITY BOOKID "oats_cred_users_guide">
+<!ENTITY YEAR "2017">
+<!ENTITY HOLDER "| INAF |">
+]>
+<chapter id="chap-available_commands">
+	<title>Client functionalities</title>
+	 <para>
+		Main functionalities provided:
+	</para>
+	 <itemizedlist>
+		<listitem>
+			<para>
+				Delegate x509 credentials
+			</para>
+
+		</listitem>
+		 <listitem>
+			<para>
+				View the currently delegated x509 certificate
+			</para>
+
+		</listitem>
+		 <listitem>
+			<para>
+				Get create a new proxy certificate based on the one that has been delegated
+			</para>
+
+		</listitem>
+
+	</itemizedlist>
+	 <section id="sect-Documentation-AC_admin_guide-Test_Chapter-Test_Section_1">
+		<title>General client description</title>
+		 <para>
+			To show the available operations the client help can be displayed:
+		</para>
+		
+<screen>
+$MY_WORKING_DIR/build/distributions/cadc-cdp-x.y.z/bin/cadc-cdp -h
+Usage: cadc-cdp [-v|--verbose|-d|--debug] --resourceID=&lt;CDP service to use&gt; &lt;op&gt; ...
+   [--cert=&lt;Cert File or Proxy Cert and Key PEM file&gt; [--key=&lt;Unencrypted Key File&gt;
+Help: cadc-cdp &lt;h|--help&gt;
+  --resourceID specifies the CDP service to use (e.g. ivo://cadc.nrc.ca/cred)
+  &lt;op&gt; is one of:    
+  --delegate [--daysValid=&lt;days&gt;
+          create new proxy certificate on the server
+  --get --userid=&lt;username&gt; [--out=&lt;file&gt; [--daysValid=&lt;days&gt; 
+  --get --userdn=&lt;user distinguished name&gt; [--out=&lt;file&gt; [--daysValid=&lt;days&gt; 
+          get a new (shorter) proxy certificate from the server;
+  --view
+          view the currently delegated proxy certificate
+
+</screen>
+
+	</section>
+	
+
+</chapter>
+

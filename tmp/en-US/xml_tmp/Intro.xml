@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "AC_admin_guide.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="chap-intro">
+	<title>Introduction</title>
+
+	<para>
+		The Credential Delegation is a client and server 
+implementation of the IVOA Credential Delegation Protocol. The 
+Credential Delegation Protocol allows a client program to delegate 
+a user's credentials to a service such that that service may make 
+requests of other services in the name of that user. The service 
+provides a RESTful interface. 
+	</para>
+        <para>
+                  In the CADC open software repository (https://github.com/opencadc)
+a credential delegation service client command line is available. This guide explains 
+how to download and run this client and the available commands. Examples are provided.
+        </para>
+
+	<section id="sect-Requirements">
+		<title>Requirements and recomendations</title>
+                <para>
+                Prerequisites and recomendations to run the Credential Delegation Service are: 
+                </para>
+                <itemizedlist>
+                    <listitem>
+		        <para>
+	        	Centos 7 Operative System is recommended,	
+		        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                        Java 7 or higher installed
+                        </para>
+                    </listitem>
+                </itemizedlist>
+
+	</section>
+
+</chapter>
+
